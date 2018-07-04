@@ -1,3 +1,26 @@
+/* 
+CS50 - https://cs50.harvard.edu/
+Problem Set 1 - Mario - Less Comfortable
+Implement a program that prints out a half-pyramid of a specified height, per the below.
+
+$ ./mario
+Height: 5
+    ##
+   ###
+  ####
+ #####
+######
+
+$ ./mario
+Height: 3
+  ##
+ ###
+####
+
+By: Daniel Watson 
+2018
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 
