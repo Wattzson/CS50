@@ -1,10 +1,8 @@
-/* 
-CS50 - https://cs50.harvard.edu/
-Problem Set 1 - Hello
-Create a program that prints "hello world" to console.
-By: Daniel Watson 
-2018
-*/
+// CS50 - https://cs50.harvard.edu/
+// 2017/18 Problem Set 1 - Hello
+// The goal is to create a program that prints "hello world" to console.
+// --Daniel Watson
+
 
 
 #include <stdio.h>

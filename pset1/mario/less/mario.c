@@ -1,6 +1,7 @@
 /* 
 CS50 - https://cs50.harvard.edu/
-Problem Set 1 - Mario - Less Comfortable
+2017/18 Problem Set 1 - Mario - Less Comfortable
+
 Implement a program that prints out a half-pyramid of a specified height, per the below.
 
 $ ./mario
@@ -17,8 +18,12 @@ Height: 3
  ###
 ####
 
-By: Daniel Watson 
-2018
+Other Specifications - 
+*To make things more interesting, first prompt the user for the half-pyramid’s height, a non-negative integer no greater than 23.
+*If the user fails to provide a non-negative integer no greater than 23, you should re-prompt for the same again.
+
+--Daniel Watson 
+
 */
 
 #include <stdio.h>
@@ -27,14 +32,12 @@ By: Daniel Watson
 int main(void)
 {
 
-
-    // Declaring variables
-    int blank;
+    int blank; // used to count white space
     int hash = 2; // We start with 2 hash tags on top
-    int height;
+    int height; // set by user
 
 
-    // Prompt user for an int, loops until an acceptable int is provided
+    // Only accepts a non-negative integar no greater than 23
     do
     {
         height = get_int("Enter a positive int that is no greater than 23: ");
@@ -42,7 +45,7 @@ int main(void)
     while (height < 0 || height > 23);
 
 
-    // Build half-pyramid
+    // Build half-pyramid from the top down
     blank = height - hash;
     for (int i = 0; i < height; i++)
     {

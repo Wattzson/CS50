@@ -41,22 +41,31 @@ function pset1_mario_less() {
         height = prompt("Please enter a positive integer that is no greater than 23:");
     } while (height<0 || height>23);
     
-    var hash = "#";
-    var space = "";
-    var hashes = [hash, hash]; // We want to start with 2 hashes ontop
-    var spaces = [space] ; 
+    // Setup
+    var mario = document.getElementById('mario_less');
+    var space = '&nbsp';
+    var hash = '#';
+    var spaces = height - 2;
+    var hashes = 2;
 
-
-    if (height > 1)
+    // Simple loop one row at a time
+    for (i = 0; i < height; i++)
     {
-        document.getElementById("mario_less").innerHTML = spaces.join("") + hashes.join("");
-        hashes.push(hash);
-        document.getElementById("mario_less").innerHTML = hashes.join("");
-    } else 
-    {
-        document.getElementById("mario_less").innerHTML = hashes.join("");
+        for (j = 0; j < spaces; j++)
+        {
+            mario.insertAdjacentHTML('beforeend', space);
+        }
+        for (j = 0; j < hashes; j++)
+        {
+            mario.insertAdjacentHTML('beforeend', hash);
+        }
+        mario.insertAdjacentHTML('beforeend', '<br>');
+        spaces--;
+        hashes++;
     }
+        
 
 
+    
+   
 }
-
