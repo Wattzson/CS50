@@ -1,3 +1,22 @@
+/* 
+CS50 - https://cs50.harvard.edu/
+2017/18 Problem Set 1 - Credit
+
+Implement a program that determines whether a provided credit card number is valid according to Luhn’s algorithm.
+
+$ ./credit
+Number: 378282246310005
+AMEX
+
+Other Specifications - 
+*Write write a program that prompts the user for a credit card number and then reports
+whether it is a valid American Express, MasterCard, or Visa card number.
+*For simplicity, you may assume that the user’s input will be entirely numeric.
+*Do not assume that the user’s input will fit in an int!
+
+--Daniel Watson
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 
